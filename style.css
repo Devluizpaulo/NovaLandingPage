@@ -165,7 +165,7 @@ header {
 .hero-custom {
   background: var(--texto-primario);
   color: var(--branco);
-  padding: 5rem 0 4rem 0;
+  padding: 4rem 0 3rem 0;
   position: relative;
   overflow: hidden;
   border-bottom: 4px solid var(--dourado);
@@ -183,33 +183,38 @@ header {
 }
 
 .hero-custom-flex {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  max-width: 1200px;
+  justify-content: space-between;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 5rem;
   position: relative;
   z-index: 2;
+  gap: 8rem;
 }
 
 .hero-content-col {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
+  flex: 1;
+  max-width: 900px;
 }
 
 .hero-title {
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 2.4rem;
+  font-weight: 1200;
   line-height: 1.2;
   margin: 0;
   color: var(--branco);
-  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   letter-spacing: -0.02em;
   position: relative;
-  text-align: justify;
+  text-align: left;
+  opacity: 0.9;
+  max-width: 90%;
 }
 
 .hero-title::after {
@@ -217,17 +222,17 @@ header {
   position: absolute;
   bottom: -8px;
   left: 0;
-  width: 120px;
-  height: 3px;
+  width: 140px;
+  height: 5px;
   background: var(--dourado);
   border-radius: 2px;
 }
 
 .hero-latin {
-  font-size: 0.95rem;
+  font-size: 2rem;
   font-style: italic;
   color: var(--dourado);
-  font-weight: 600;
+  font-weight: 900;
   margin-bottom: 1rem;
   text-align: center;
   background: rgba(255, 179, 0, 0.1);
@@ -238,11 +243,11 @@ header {
 }
 
 .hero-desc {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin: 0;
   opacity: 0.95;
-  text-align: justify;
+  text-align: left;
 }
 
 .btn-whatsapp-hero {
@@ -287,15 +292,17 @@ header {
 
 .hero-logo-col {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex: 0 0 auto;
 }
 
 .hero-logo-img {
-  max-width: 100%;
+  max-width: 750px;
+  width: 100%;
   height: auto;
   background: linear-gradient(135deg, var(--texto-primario) 0%, #1a1a3a 100%);
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 
     0 12px 40px rgba(10, 10, 35, 0.4),
     0 4px 16px rgba(255, 179, 0, 0.15),
@@ -1084,9 +1091,10 @@ footer p {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
   .hero-custom-flex {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 3rem;
     text-align: center;
+    padding: 0 3rem;
   }
 
   .sobre-content {
@@ -1204,17 +1212,19 @@ footer p {
   }
 
   .hero-title {
-    font-size: 2.2rem;
-    line-height: 1.1;
+    font-size: 1.6rem;
+    line-height: 1.2;
     text-align: left;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0.85;
+    max-width: 100%;
   }
 
   .hero-logo-img {
     padding: 1.5rem;
-    max-width: 280px;
+    max-width: 500px;
     margin: 0 auto;
-    border-radius: 16px;
+    border-radius: 10px;
     box-shadow: 
       0 8px 24px rgba(10, 10, 35, 0.3),
       0 2px 8px rgba(255, 179, 0, 0.1);
@@ -1250,10 +1260,12 @@ footer p {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.8rem;
-    line-height: 1.1;
+    font-size: 1.3rem;
+    line-height: 1.2;
     text-align: left;
     margin-bottom: 0.8rem;
+    opacity: 0.8;
+    max-width: 100%;
   }
 
   .areas h2,
@@ -1273,6 +1285,7 @@ footer p {
 
   .hero-content-col {
     order: 2;
+    max-width: 100%;
   }
 
   .hero-logo-col {
