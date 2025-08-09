@@ -192,29 +192,29 @@ header {
   padding: 0 5rem;
   position: relative;
   z-index: 2;
-  gap: 8rem;
+  gap: 5rem;
 }
 
 .hero-content-col {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  flex: 1;
-  max-width: 900px;
+  gap: 1.5rem;
+  flex: 0.8;
+  max-width: 680px;
 }
 
 .hero-title {
-  font-size: 2.4rem;
-  font-weight: 1200;
+  font-size: 2rem;
+  font-weight: 800;
   line-height: 1.2;
   margin: 0;
   color: var(--branco);
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  letter-spacing: -0.02em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.01em;
   position: relative;
   text-align: left;
   opacity: 0.9;
-  max-width: 90%;
+  max-width: 18ch;
 }
 
 .hero-title::after {
@@ -243,11 +243,13 @@ header {
 }
 
 .hero-desc {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin: 0;
-  opacity: 0.95;
-  text-align: left;
+  opacity: 0.9;
+  text-align: justify;
+  max-width: 52ch;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .btn-whatsapp-hero {
@@ -256,13 +258,13 @@ header {
   gap: 0.75rem;
   background: linear-gradient(135deg, var(--dourado) 0%, #ffd54f 100%);
   color: var(--texto-primario);
-  padding: 1.2rem 2.5rem;
+  padding: 1rem 2rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 32px rgba(255, 179, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(255, 179, 0, 0.35);
   max-width: fit-content;
   border: 2px solid var(--dourado);
   position: relative;
@@ -294,11 +296,11 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex: 0 0 auto;
+  flex: 1.35 1 0;
 }
 
 .hero-logo-img {
-  max-width: 750px;
+  max-width: 1000px;
   width: 100%;
   height: auto;
   background: linear-gradient(135deg, var(--texto-primario) 0%, #1a1a3a 100%);
@@ -445,13 +447,13 @@ section {
   .area-card {
   background: var(--branco);
   border-radius: 16px;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 1cm;
   box-shadow: 0 8px 32px rgba(10, 10, 35, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid rgba(10, 10, 35, 0.1);
   position: relative;
   overflow: hidden;
-}
+ }
 
 .area-card::before {
   content: '';
@@ -487,6 +489,17 @@ section {
   line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: justify;
+}
+
+/* Garante que o botão fique alinhado na base do card, a 1cm da borda */
+.area-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.area-card .btn-area {
+  margin-top: auto;
 }
 
 .btn-area {
@@ -1138,7 +1151,7 @@ footer p {
   .depoimentos-subtitle,
   .depoimento-texto,
   .contato-card-text {
-    text-align: left;
+    text-align: justify;
   }
   
   .btn-whatsapp-hero {
@@ -1222,7 +1235,7 @@ footer p {
 
   .hero-logo-img {
     padding: 1.5rem;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 

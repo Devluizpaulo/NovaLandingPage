@@ -17,11 +17,78 @@
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vasconcellos Advocacia</title>
+  <title>Vasconcellos Advocacia | Defesa Criminal</title>
+    <meta name="description" content="Advogado criminal em Diadema/SP. Especialista em Processo Penal e Direito Penal Econômico. Defesa estratégica e personalizada. Atendimento 24h. Fale com o Dr. Fernando Vasconcellos.">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Vasconcellos Advocacia - Dr. Fernando Vasconcellos">
+    <meta name="theme-color" content="#0a0a23">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link id="canonical" rel="canonical" href="https://www.fvadvogados.com.br/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vasconcellos Advocacia - Defesa Criminal">
+    <meta property="og:description" content="Advogado criminal. Especialista em Processo Penal e Direito Penal Econômico. Defesa estratégica e personalizada. Atendimento 24h.">
+    <meta id="og-url" property="og:url" content="https://www.fvadvogados.com.br/">
+    <meta id="og-image" property="og:image" content="https://www.fvadvogados.com.br/VASCONCELLOS.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vasconcellos Advocacia - Defesa Criminal">
+    <meta name="twitter:description" content="Advogado criminal. Especialista em Processo Penal e Direito Penal Econômico. Defesa estratégica e personalizada. Atendimento 24h.">
+    <meta id="tw-image" name="twitter:image" content="https://www.fvadvogados.com.br/VASCONCELLOS.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+    <script>
+      (function () {
+        try {
+          var origin = 'https://www.fvadvogados.com.br';
+          var path = '/';
+          var absoluteUrl = origin + path;
+
+          var canonical = document.getElementById('canonical');
+          if (canonical) canonical.setAttribute('href', absoluteUrl);
+
+          var ogUrl = document.getElementById('og-url');
+          if (ogUrl) ogUrl.setAttribute('content', absoluteUrl);
+
+          function absolutize(selector) {
+            var el = document.querySelector(selector);
+            if (!el) return;
+            var val = el.getAttribute('content') || el.getAttribute('href') || '';
+            if (!val) return;
+            if (!/^https?:\/\//i.test(val)) {
+              var abs = origin + (val.startsWith('/') ? '' : '/') + val;
+              if (el.hasAttribute('content')) el.setAttribute('content', abs);
+              if (el.hasAttribute('href')) el.setAttribute('href', abs);
+            }
+          }
+          absolutize('#og-image');
+          absolutize('#tw-image');
+
+          // JSON-LD dinâmico (LegalService)
+          var ld = {
+            '@context': 'https://schema.org',
+            '@type': 'LegalService',
+            'name': 'Vasconcellos Advocacia',
+            'url': 'https://www.fvadvogados.com.br',
+            'image': 'https://www.fvadvogados.com.br/VASCONCELLOS.png',
+            'telephone': '+55-11-99482-5120',
+            'areaServed': 'Diadema, SP, Brasil',
+            'address': {
+              '@type': 'PostalAddress',
+              'addressLocality': 'Diadema',
+              'addressRegion': 'SP',
+              'addressCountry': 'BR'
+            },
+            'sameAs': ['https://www.instagram.com/adv.vasconcellos','https://www.fvadvogados.com.br']
+          };
+          var s = document.createElement('script');
+          s.type = 'application/ld+json';
+          s.text = JSON.stringify(ld);
+          document.head.appendChild(s);
+        } catch (e) { /* noop */ }
+      })();
+    </script>
 </head>
 
 <body>
@@ -65,15 +132,15 @@
         <img src="VASCONCELLOS.png" alt="Logo Vasconcellos" class="hero-logo-img">
       </div>
       <div class="hero-content-col">
-        <h1 class="hero-title">Proteja os seus direitos e sua liberdade com um advogado especializado</h1>
-        <p class="hero-desc">Especializado em Direito Penal e Penal Econômico, ofereço defesa estratégica e
-          personalizada para proteger seus direitos e sua liberdade em momentos desafiadores.</p>
+        <h1 class="hero-title">Proteja os seus direitos e a sua liberdade.</h1>
+        <p class="hero-desc">Advogado especialista em Processo Penal e Direito Penal Econômico, oferecemos uma defesa
+          estratégica e personalizada para proteger os seus direitos e a sua liberdade.</p>
         <a href="https://wa.me/5511994825120" class="btn-whatsapp-hero">
-          <img src="whatsapp-icon.png" alt="WhatsApp" style="width:28px;vertical-align:middle;margin-right:8px;">FALAR
-          COM ADVOGADO ESPECIALISTA<br>
+          <img src="whatsapp-icon.png" alt="WhatsApp" style="width:28px;vertical-align:middle;margin-right:8px;">Falar
+          com o advogado
         </a>
       </div>
-      
+
     </div>
     <div class="hero-contact-info">
       <div class="contact-item">
@@ -105,7 +172,7 @@
     <div class="container">
       <h2>Nossos Serviços</h2>
       <p class="areas-subtitle">
-        Especializado em Direito Penal e Penal Econômico, ofereço serviços jurídicos completos para proteger seus
+        Especializado em Direito Penal e Penal Econômico, oferecemos serviços jurídicos completos para proteger seus
         direitos e sua liberdade em todas as fases do processo criminal.
       </p>
       <div class="areas-grid">
@@ -362,7 +429,7 @@
     </div>
   </section>
 
-  <section id="contato" class="contato-section">
+  <!-- <section id="contato" class="contato-section">
     <div class="contato-cards">
       <div class="contato-card">
         <div class="contato-card-icon address">
@@ -393,11 +460,7 @@
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Vasconcellos Advocacia. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+  
 
   <script src="script.js"></script>
 
@@ -409,6 +472,11 @@
     </svg>
     <span class="whatsapp-tooltip">Fale com o Dr. Fernando</span>
   </a>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Vasconcellos Advocacia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 </body>
 
 </html>
